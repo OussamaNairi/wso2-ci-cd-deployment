@@ -1,37 +1,25 @@
 environments:
     - name: prod
       configs:
-          endpoints:
-              production:
-                  url:
-              sandbox:
-                  url:
-          security:
-              enabled:
-              type:
-              username:
-              password:
           deploymentEnvironments:
               - displayOnDevportal: true
                 deploymentEnvironment: Default
                 deploymentVhost: localhost
-              - displayOnDevportal:
-                deploymentEnvironment:  
-                deploymentVhost: localhost
-          certs:
-              - hostName:
-                alias:
-                path:
-              - hostName:
-                alias:
-                path:
-          mutualSslCerts:
-              - tierName:
-                alias:
-                path:
-              - tierName:
-                alias:
-                path:
           policies:
               - Gold
               - Silver 
+    - name: test
+      configs:
+          deploymentEnvironments:
+              - displayOnDevportal: true
+                deploymentEnvironment: Default
+                deploymentVhost: localhost
+          policies:
+              - Gold
+              - Silver  
+          security:
+              production:
+                  enabled: true
+                  type: basic
+                  username: admin
+                  password: admin     
