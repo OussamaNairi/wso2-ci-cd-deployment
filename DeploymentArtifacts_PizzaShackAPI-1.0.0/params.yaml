@@ -1,5 +1,5 @@
 environments:
-    - name:
+    - name: prod
       configs:
           endpoints:
               production:
@@ -12,12 +12,12 @@ environments:
               username:
               password:
           deploymentEnvironments:
-              - displayOnDevportal:
-                deploymentEnvironment:
-                deploymentVhost:
+              - displayOnDevportal: true
+                deploymentEnvironment: Default
+                deploymentVhost: localhost
               - displayOnDevportal:
                 deploymentEnvironment:  
-                deploymentVhost:
+                deploymentVhost: localhost
           certs:
               - hostName:
                 alias:
@@ -33,5 +33,5 @@ environments:
                 alias:
                 path:
           policies:
-              - 
-              -  
+              - Gold
+              - Silver 
